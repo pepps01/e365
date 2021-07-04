@@ -33,7 +33,7 @@ a {
 /* HERO- CONTAINER */
 
 .hero-container {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   background: url("../images/HeaderImage.png"), rgba(0, 0, 0, 0.3);
   background-blend-mode: overlay;
@@ -41,11 +41,25 @@ a {
   min-height: 100%;
   background-size: cover;
   background-position: center;
-  height: 75vh;
+  height: 75vh; */
+  position: relative;
+}
+.carousel-container {
+  position: relative;
+}
+.carousel-container > .nav-container {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  width: 100%;
+}
+.carousel-inner {
+  max-height: 71vh;
 }
 .nav-container {
   background-color: transparent !important;
-  color: white;
+  z-index: 2;
+  color: #fff;
 }
 
 /* Navigation */
@@ -89,8 +103,11 @@ a {
   color: #fff;
 }
 .hero-title {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  right: 20%;
   color: white;
-  padding-top: 9%;
 }
 .hero-title h1 {
   font-weight: bolder;
@@ -105,13 +122,22 @@ a {
 }
 
 .input-container {
+  position: absolute;
   background: white;
   display: block;
+  background-color: white;
   max-width: 700px;
   margin: auto;
   border-radius: 30px;
   position: relative;
 }
+.relate {
+  position: absolute;
+  top: 45%;
+  z-index: 4;
+  width: 100%;
+}
+
 .input-container input {
   width: 100%;
   padding-top: 0.8rem;
@@ -231,7 +257,7 @@ a {
 .product-types {
   display: flex;
   flex-wrap: wrap;
-  width: 55%;
+  width: 45%;
   justify-content: flex-end;
 }
 .product-types img {
@@ -434,7 +460,6 @@ footer {
   font-weight: 700;
   font-size: 1.5rem;
   text-align: left;
-
 }
 .card-blog .thumbnail-text p {
   color: #f0a74a;
